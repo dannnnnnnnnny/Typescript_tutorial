@@ -68,3 +68,23 @@ var result = add(10, 20);
 result.toLocaleString();
 // result. 을 찍으면 ts가 result의 값을 number로 인식하여 number 타입에서 사용 가능한 method를 보여줌 (타입 추론, 자동 완성)
 ```
+
+### JS를 TS처럼 사용하기
+
+```js
+// @ts-check
+
+/**
+ * @param {number} a 첫번째 숫자
+ * @param {number} b 두번째 숫자
+ */
+
+function sum(a, b) {
+  return a + b;
+}
+
+sum(10, 20);
+sum(10, '20');
+```
+
+- JSdoc을 통해 타입 추론 및 파라미터 설명까지 추가 가능
