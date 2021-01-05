@@ -9,3 +9,11 @@ class PersonClass {
     this.age = age;
   }
 }
+
+class PersonClass2 {
+
+  constructor(private name: string, public age: number, readonly log: string) {
+    this.name = name;
+    this.age = age;
+  }
+}

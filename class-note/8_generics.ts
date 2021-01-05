@@ -79,3 +79,19 @@ strLog.split(''); // string의 split 메소드 사용 가능
 
 logText<boolean>(true);
 
+
+
+
+// 인터페이스에 제네릭 선언 방법
+// interface DropDown {
+//   value: string;
+//   selected: boolean;
+// }
+// const DDobj: DropDown = { value: 'abc', selected: false };
+
+
+interface DropDown<T> {
+  value: T;
+  selected: boolean;
+}
+const DDobj: DropDown<string> = { value: 'abc', selected: false };
