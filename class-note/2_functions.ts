@@ -17,7 +17,7 @@ function sum2(a: number, b: number): number {
 // sum2(10);
 // sum2(10, 20, 30, 40); // 유연한 js와 달리 추가적인 파라미터를 받지 못함
 
-// 함수의 옵셔널 파라미터
+// 함수의 옵셔널 파라미터(?)
 function log(a: string, b?: string) {
 
 }
