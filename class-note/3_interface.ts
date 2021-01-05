@@ -58,6 +58,22 @@ Object.keys(obj).forEach((value) => { // value는 자동적으로 string Type �
 });
 
 
+// 인터페이스 확장
+interface Person {
+  name: string;
+  age: number;
+}
+
+interface Developer extends Person {
+  language: string;  
+}
+
+var thor: Developer = {
+  language: 'TS',
+  name: '토르',
+  age: 100,
+}
+
 
 
 
