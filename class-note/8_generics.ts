@@ -82,7 +82,7 @@ logText<boolean>(true);
 
 
 
-// 인터페이스에 제네릭 선언 방법
+// # 인터페이스에 제네릭 선언 방법
 // interface DropDown {
 //   value: string;
 //   selected: boolean;
@@ -95,3 +95,39 @@ interface DropDown<T> {
   selected: boolean;
 }
 const DDobj: DropDown<string> = { value: 'abc', selected: false };
+
+
+
+
+// # 제네릭의 타입 제한
+// function logTextLength<T>(text: T): T {
+//   console.log();
+//   // console.log(text.length); // Error: 어떤 타입이 들어올지 확실하지 않기에
+//   return text;
+// }
+
+// logTextLength<string>('h1');
+
+
+// 타입 힌트를 통한 타입 제한
+// 제네릭으로 받은 타입을 배열로 활용
+// function logTextLength<T>(text: T[]): T[] {
+//   console.log(text.length); // T는 배열이기 때문에 length, forEach 제공
+//   text.forEach(function (text) {
+//     console.log(text);
+//   });
+//   return text;
+// }
+
+// logTextLength<string>(['h1', 'abc']);
+
+
+// # 제네릭 타입 제한 2 - 정의된 타입 이용
+interface LengthType {
+  length: number;
+}
+
+function logTextLength<T extends LengthType>(text: T): T {
+  text.length;
+  return text;
+}
