@@ -131,3 +131,28 @@ function logTextLength<T extends LengthType>(text: T): T {
   text.length;
   return text;
 }
+
+logTextLength('a'); // 문자열은 기본적으로 length 제공
+// logTextLength(10); // Error
+logTextLength({ length: 10 });
+
+
+
+// # 제네릭 타입 제한 3 - keyof 이용
+interface ShoppingItem {
+  name: string;
+  price: number;
+  stock: number;
+}
+
+// ShoppingItem 인터페이스의 key 중에 한가지가 제네릭(타입)이 된다는 의미
+
+function getShoppingItemOption<T extends keyof ShoppingItem>(itemOption: T): T {
+  return itemOption;
+}
+
+// getShoppingItemOption(10);  // name, price, stock 3가지에서만 받을 수 있기에 Error
+// getShoppingItemOption<string>('a');
+
+// Ctrl + Space 하면 자동완성
+getShoppingItemOption("name");
