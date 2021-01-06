@@ -26,19 +26,19 @@ function getB(b = 10) {
 
 
 // 타입 추론 기본 3
-interface DropDown<T> {
+interface InferenceDropDown<T> {
   value: T;
   title: string;
 }
 
 // 제네릭 타입 K를 정의하면 상속받은 DropDown 인터페이스의 제네릭 타입도 K로 따라옴
-interface DetailedDropDown<K> extends DropDown<K> {
+interface DetailedDropDown<K> extends InferenceDropDown<K> {
   description: string;
   tag: K;
 }
 
 // 인터페이스 제네릭을 통한 타입 추론
-var shoppingItem: DropDown<string> = {
+var shoppingItem: InferenceDropDown<string> = {
   value: 'abc',
   title: 'hello'
 }
