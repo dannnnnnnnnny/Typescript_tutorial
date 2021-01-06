@@ -1,21 +1,4 @@
-interface PhoneNumberDictionary {
-  [phone: string]: {
-    num: number;
-  };
-}
-
-interface Contact {
-  name: string;
-  address: string;
-  phones: PhoneNumberDictionary;
-}
-
-enum PhoneType {
-  Home = 'home',
-  Office = 'office',
-  Studio = 'studio'
-}
-
+import { Contact, PhoneType } from './types';
 // api
 /*
 Promise 형식으로 return 되며 제네릭타입은 Contact[]
