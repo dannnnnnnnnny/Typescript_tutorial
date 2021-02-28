@@ -94,7 +94,7 @@ interface DropDown<T> {
   value: T;
   selected: boolean;
 }
-const DDobj: DropDown<string> = { value: 'abc', selected: false };
+const DropDownGeneric: DropDown<string> = { value: 'abc', selected: false };
 
 
 

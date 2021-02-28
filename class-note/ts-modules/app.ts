@@ -1,6 +1,6 @@
 import { Todo } from './types';
 
-var item: Todo = {
+const item: Todo = {
   title: '할 일 1',
   checked: false,
 };

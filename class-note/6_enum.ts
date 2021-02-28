@@ -45,3 +45,11 @@ askQuestion(Answer.Yes);
 // 파라미터의 타입이 Answer라는 Enum이기 때문에 enum에서 제공되는 값만 넘길 수 있음
 // DropDown등의 목록이 필요한 형태에서 enum을 정의해서 사용하면
 // 정확한 코드 및 예외 처리 등의 케이스를 줄일 수 있음
+
+enum Color {
+  Red = 1,
+  Green = 2,
+  Blue = 3
+}
+const cn: string = Color[4];
+console.log(cn);
