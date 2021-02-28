@@ -76,8 +76,14 @@ var thor: Developer = {
 
 
 
+interface CraftBeer {
+  brand?: string;
+}
 
+function brewBeer(beer: CraftBeer) {
+  console.log(beer); // Error: Property 'nam' does not exist on type 'Beer'
+}
 
-
-
+let myBeer = { brandon: 'what' };
+brewBeer(myBeer as CraftBeer);
 
